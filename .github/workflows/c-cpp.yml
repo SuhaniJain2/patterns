@@ -14,7 +14,7 @@ jobs:
       run: sudo apt-get install g++ -y
 
     - name: Compile program
-      run: g++ -o output main.cpp
+      run: g++ -o output p21.cpp
 
     - name: Run program
       run: ./output
