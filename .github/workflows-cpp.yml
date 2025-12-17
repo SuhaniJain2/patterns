@@ -1,0 +1,20 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install g++
+      run: sudo apt-get install g++ -y
+
+    - name: Compile program
+      run: g++ -o output p21.cpp
+
+    - name: Run program
+      run: ./output
